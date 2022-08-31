@@ -1,0 +1,37 @@
+{% extends "mortalitychart/index.html" %}
+{% load static %}
+
+{% block body %}
+<div class="container">
+  <center class="m-5" ><h4>Statistics  of a Particular Disease with Gender</h4></center>
+       
+  <form class="d-flex" method="POST" name="searchForm">
+      {% csrf_token %}
+      <input class="form-control me-2" type="text" placeholder="input disease title" name="diseaseTitle">
+      <button class="btn btn-primary" type="submit">Check</button>
+    </form>
+  </div>
+  <br>
+  <div class="container">
+    <h5 class="p-3">Total number of {{diseaseName}} case(s): {{cases}}</h5>
+      <center><h5 class="p-5"> Chart representation of {{diseaseName}} in Mortality</h5></center>
+<br>
+<br>
+<div class="row">
+  <div class="col-md-6">
+    <div id="myFirstchart">{{ output1|safe }}</div>
+  </div>
+  <div class="col-md-6">
+    <div id="myFirstchart1">{{ output2|safe }}</div>
+  </div>
+</div>
+<br>
+  <br>
+  <div class="col-md-4 offset-md-1">
+    <a href="{% url 'mortalitychart' %}" class="btn btn-success">Back</a>
+ </div>
+ <br><br><br>
+</div>
+</div>
+
+{%  endblock %}

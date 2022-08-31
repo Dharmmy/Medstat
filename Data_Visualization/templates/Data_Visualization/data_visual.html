@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'medstat/medstatcss.css' %}">
+    <link rel="stylesheet" href="{% static 'medstat/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'medstat/aos.css' %}">
+    <title>Medstat</title>
+</head>
+<body>
+    <div class="container">
+        <br><br><br>
+            <center>
+                <h2>Medstat Data Visualization</h2>
+            </center>
+            <br>
+            <br>
+            <br>
+            <br>
+        <div class="row">
+            <div class="col-12 mb-4 col-md-4">
+                <div class="item" data-aos="flip-left" data-aos-duration="1500">
+                  <div class="card">       
+                    <div class="card-body">
+                      <h5 class="card-title">Discharged</h5>
+                      <p class="card-text">Discharged Data Visualization</p>
+                      <a href="{% url 'dischargedchart' %}" class="btn btn-primary">Click here</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+        <div class="col-12 mb-4 col-md-4">
+            <div class="item" data-aos="flip-left" data-aos-duration="1500">
+                <div class="card">       
+                        <div class="card-body">
+                            <h5 class="card-title">Mortality</h5>
+                            <p class="card-text">Mortality Data Visualization</p>
+                             <a href="{% url 'mortalitychart' %}" class="btn btn-primary">Click here</a>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+        <div class="col-12 mb-4 col-md-4">
+                <div class="item" data-aos="flip-left" data-aos-duration="1500">
+                  <div class="card">      
+                    <div class="card-body">
+                      <h5 class="card-title">Morbidity</h5>
+                      <p class="card-text">Morbidity Data Visualization</p>
+                      <a href="{% url 'morbiditychart' %}" class="btn btn-primary">Click here</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+            
+        </div>
+    </div>
+    <script src="{% static 'medstatscript/medstat.js' %}"></script>
+    <script src="{% static 'medstatscript/aos.js' %}"></script>
+    <script src="{% static 'medstatscript/bootstrap.min.js' %}"></script>
+    
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

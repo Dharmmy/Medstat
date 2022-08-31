@@ -1,0 +1,51 @@
+{% extends "login/layout.html" %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+<header class="pb-5">
+    <nav class="navbar navbar-expand-md navbar-dark bg-success fixed-top">
+        <div class="container">
+          <img class="navbar-brand" src="{% static 'images/download (4).jpeg' %}" alt="Nigeria_cat_of_arm" width="40px"> <span class="navbar-brand fw-bold">Medstat</span>
+          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-collapse collapse" id="navbarCollapse">
+                <ul class="navbar-nav mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{% url 'login' %}">Login</a>
+                          </li>
+                  </ul>      
+              </div>
+            </div>
+        </div>
+      </div>
+  </header>
+<div class="container pt-5">
+  <div data-aos="zoom-in-up" data-aos-duration="900" id="pp">
+    <center>
+      <h2>Registration</h2>
+  </center>
+    <div class="form-group">
+      <form method="POST">
+          {% csrf_token %}
+          {{ form|crispy }}
+          <div class="pt-3">
+              <button class="btn btn-primary" type="submit">Sign up</button>
+          </div>
+        </form>
+      
+   </div>
+
+  </div>
+    </div>
+</div>
+  
+<br>
+<br>
+<br>
+{% endblock %}

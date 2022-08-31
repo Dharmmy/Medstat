@@ -1,0 +1,38 @@
+@keyframes spin {
+    from {
+        transform: rotateY(0deg);
+}
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+#images{
+    margin-left: 440px;
+    margin-top: 70px;
+    margin-bottom: 15px;
+    size: 30px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    animation-name: spin;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#h1text{
+    margin-left: 400px;
+}
+
+#pp{
+    border: 1.5px;
+    border-color: rgb(3, 156, 3);
+    border-style: solid;
+    border-radius: 20px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    padding: 80px;
+    justify-content: center;
+    align-content: center;   
+}
+
+#nav{
+    margin-left: 100px;
+}

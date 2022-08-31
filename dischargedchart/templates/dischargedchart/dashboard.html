@@ -1,0 +1,30 @@
+{% extends "dischargedchart/index.html" %}
+
+{% load static %}
+
+{% block body %}
+<div class="container">
+    <center><h1 class="pt-4">Discharged Data Visualization</h1></center> 
+    <br>
+    <br> 
+     <div class="fw-bold pt-4"><h3>Total number of cases: {{ cases }}.</h3></div>
+     <div class="row">
+         <div class="col-md-6">
+             <div id="myFirstchart-container">{{ output|safe }}</div>
+         </div>
+         <div class="col-md-6">
+             <div id="myFirstchart-container2">{{ output2|safe }}</div>
+         </div>
+     </div>
+    <br> <br>
+     <div class="row">
+         <div class="col-md-4 offset-md-2">
+             <a href="{% url 'datavisual' %}" class="btn btn-success">Back</a>
+         </div>
+         <div class="col-md-4 offset-md-2">
+            <a href="{% url 'dischargedDiseasechart' %}" class="btn btn-primary">Disease Chart</a>
+         </div>
+     </div>
+     <br><br>
+</div>
+{% endblock %}

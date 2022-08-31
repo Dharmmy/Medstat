@@ -1,0 +1,61 @@
+
+
+{% extends "login/layout.html" %}
+
+{% load static %}
+
+{% block body %}
+<body class="bg-light">
+
+    
+
+    <div>
+        <div class="container">
+            <div >
+                <div class="heading" >
+                 <img id="images" src="{% static 'images/download (4).jpeg' %}" alt="Nigeria coat of arm">
+                 <h3 class="mt-4 text-success fw-bold" id="h1text">Federal Ministry of Health</h3>
+                </div>
+                <div data-aos="zoom-in-up" data-aos-duration="900">
+                    <div class="p-3">
+                        <form action="{% url 'login' %}" method="POST" class="bg-white text-success" id="pp">
+                            {% if message %}
+                            <div class="fw-bold text-danger pl-5">{{message}}</div>
+                            {% endif %}
+                            {% csrf_token %}
+                                <div class="mb-3">
+                                    <label  class="form-label">Username</label>
+                                    <input type="text" name="username" class="form-control" required="" autofocus="true">
+                                  </div>
+                                <div class="mb-3">
+                                    <label  class="form-label">Password</label>
+                                    <input type="password" name="password" class="form-control" required="" >
+                                  </div>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <a class="text-danger text-decoration-none" href="#">Forgot your password?</a>
+                                            </div>
+                                            <div class="mt-3 mt-md-0 col-md-4 offset-md-2">
+                                                <div class="text-primary font-monospace">Yet to register? <a class="text-decoration-none" href="{% url 'registration' %}">Register here</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  <div class="">
+                                    <button type="submit"  class="btn btn-success mt-4 text-white" width="100%">Login</button>
+                              </div>
+                            
+                        </form>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        
+        
+    </div>
+        <script src="/Users/METIBEMU DAMI/Documents/website html/demo/js/demo.js"></script>
+        <script src="/Users/METIBEMU DAMI/Documents/website html/demo/js/bootstrap.min.js"></script>
+    </body>
+
+{% endblock %}

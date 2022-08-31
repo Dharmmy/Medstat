@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'medstat/medstatcss.css' %}">
+    <link rel="stylesheet" href="{% static 'medstat/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'medstat/aos.css' %}">
+    <link rel="icon" href="{% static 'images/download (4).jpeg' %}" >
+    <title>Medstat</title>
+</head>
+<body>
+                 {% block body %}
+                 {% endblock %}
+
+
+    <script src="{% static 'medstatscript/medstat.js' %}"></script>
+    <script src="{% static 'medstatscript/aos.js' %}"></script>
+    <script src="{% static 'medstatscript/bootstrap.min.js' %}"></script>
+    
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Morbidity Chart</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'medstat/medstatcss.css' %}">
+    <link rel="stylesheet" href="{% static 'medstat/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'medstat/aos.css' %}">
+    <link rel="icon" href="{% static 'images/download (4).jpeg' %}" >
+    <script type="text/javascript" src="{% static "fushioncharts/fusioncharts.js" %}"></script>
+    <script type="text/javascript" src="{% static "fushioncharts/fusioncharts.charts.js" %}"></script>
+    <script type="text/javascript" src="{% static "fushioncharts/themes/fusioncharts.theme.fusion.js" %}"></script>
+    <script src="{% static 'medstatscript/medstat.js' %}"></script>
+    <script src="{% static 'medstatscript/aos.js' %}"></script>
+    <script src="{% static 'medstatscript/bootstrap.min.js' %}"></script>
+    </head>
+    <body>
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>
+

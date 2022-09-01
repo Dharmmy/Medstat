@@ -16,7 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from django.conf import settings
-from django.conf.urls.static import static 
+from django.conf.urls.static import static
+
+from django.conf.urls import url
+from django.views.static import serve
 
 
 admin.site.site_title = 'Medstat Admin Portal'
